@@ -1,0 +1,40 @@
+.container {
+  position: absolute;
+  top: 0rem;
+  width: 350px;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #171717;
+  border-radius: 2rem 0rem 0rem 2rem;
+  padding: 2rem 1rem;
+  box-sizing: -50px 0px 21px 70px rgb(255, 255, 255);
+  animation: appear 0.7s ease forwards;
+}
+
+.name {
+  width: 100%;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin-bottom: 2rem;
+  color: #fafafa;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #ffa500;
+}
+
+.teamsDiv {
+  background-color: #313131;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+@keyframes appear {
+  from {
+    right: -70%;
+  }
+  to {
+    right: 0rem;
+  }
+}

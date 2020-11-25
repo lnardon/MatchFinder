@@ -49,7 +49,13 @@ function Homepage() {
         ></Marker>
         <button className={styles.addBtn}>ADD</button>
       </MapContainer>
-      {isOpen && <Sidebar />}
+      {isOpen && (
+        <Sidebar
+          info={{
+            teams: [{ name: "Cossa Nostra", contact: "cossanostra@gmail.com" }],
+          }}
+        />
+      )}
     </div>
   ) : null;
 }
