@@ -2,14 +2,11 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 #root {
+  position: relative;
   width: 100%;
   min-height: 100vh;
-}
-
-#mapId {
-  width: 400px;
-  height: 200px;
 }
