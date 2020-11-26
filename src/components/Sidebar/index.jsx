@@ -13,6 +13,15 @@ function Sidebar({ info }) {
           return <TeamCard info={team} />;
         })}
       </div>
+      <button
+        className={styles.addBtn}
+        onClick={() => {
+          let name = prompt("Digite o nome do time");
+          alert(`Time ${name} adicionado a base (Em desenvolvimento)`);
+        }}
+      >
+        ADD TEAM
+      </button>
     </div>
   );
 }
