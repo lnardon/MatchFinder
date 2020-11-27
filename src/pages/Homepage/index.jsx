@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import L from "leaflet";
 
 import styles from "./styles.module.css";
@@ -7,7 +7,7 @@ import Sidebar from "../../components/Sidebar";
 
 function Homepage() {
   const [latLong, setLatLong] = useState();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const userPositionIcon = L.icon({
     iconUrl: require("../../assets/user.svg"),
     iconSize: [32, 32],
@@ -51,6 +51,7 @@ function Homepage() {
       </MapContainer>
       {isOpen && (
         <Sidebar
+          close={() => setIsOpen(!isOpen)}
           info={{
             teams: [{ name: "Cossa Nostra", contact: "cossanostra@gmail.com" }],
           }}
